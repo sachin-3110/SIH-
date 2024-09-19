@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Management Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
+<body class="w-full h-screen">
+    <!-- Navigation Bar -->
+    <nav class="flex justify-between w-full fixed p-4">
+        <div class="flex items-center w-[20%]">
+            <a href="/assets/index.html">
+                <img src="asset/Make Logo.jpg" class="h-full w-24" alt="Logo">
+            </a>
+        </div>
+        <div class="lg:flex items-center overflow-hidden hidden w-[40%] bg-[#1253224c] rounded-full">
+            <a href="/assets/index.html" id="Home-button"
+            class=" hover:bg-[#dadada] hover:text-zinc-700 duration-300 text-white text-[3vh] font-extrabold px-2 rounded">Home</a>
+            <a href="/assets/about.html" id="about-button"
+                class=" hover:bg-[#dadada] hover:text-zinc-700 duration-300 text-white text-[3vh] font-extrabold px-2 rounded ml-2">About</a>
+            <a href="/assets/services.html" id="about-button"
+                class=" hover:bg-[#dadada] hover:text-zinc-700 duration-300 text-white text-[3vh] font-extrabold px-2 rounded ml-2">Services</a>
+            <a href="/assets/ContactUs.html" id="about-button"
+                class=" hover:bg-[#dadada] hover:text-zinc-700 duration-300 text-white text-[3vh] font-extrabold px-2 rounded ml-2">Contact
+                Us</a>
+            <a href="LogSignup.html"
+                class=" hover:bg-[#dadada] hover:text-zinc-700 duration-300 text-white text-[3vh] font-extrabold px-2 rounded ml-2">Login/Signup</a
+                href="">
+        </div>
+        <div class="flex  text-white text-xl gap-2">
+            <div><i class="ri-global-fill"></i></div>
+            <h1>English</h1>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class=" bg-fixed bg-cover bg-center h-screen w-full"
+        style="background-image: url('/assets/asset/bg.webp');">
+        <div
+            class="container h-full flex flex-col bg-black md:flex-row w-full md:mx-auto p-4 pt-6 md:p-6 lg:p-12 bg-opacity-50">
+            <div class="">
+                <p class="text-[15vw] w-1/2 lg:text-[15vh] font-bold text-white">Disaster Management Website</p>
+                <p class="text-lg text-zinc-300 w-1/2">Welcome to our disaster management website, where you can find
+                    resources and information to help you prepare for and respond to disasters.</p>
+            </div>
+            <div
+                class="lg:w-1/2 w-full  md:justify-between md:p-20 flex-col gap-2 flex md:flex-col md:gap-5 md:text-[2.5vh]">
+                <div class="gap-5 flex"><a href="#"
+                        class="py-1 w-fit h-fit hover:border-[1px] hover:text-white duration-300 hover:bg-transparent px-2 bg-orange-500 shadow-[0_5px_20px_rgba(255,255,255)] rounded-2xl text-white font-semibold">SOS-Ambulance</a>
+                    <a href="#"
+                        class="py-1 w-fit h-fit hover:border-[1px] hover:text-white duration-300 hover:bg-transparent px-2 bg-orange-500 shadow-[0_5px_20px_rgba(255,255,255)] rounded-2xl text-white font-semibold">SOS
+                        Firs-Aid Aid</a>
+                </div>
+                <div class="relative gap-5 flex md:left-[30%]"><a href="#"
+                        class="py-1 w-fit h-fit hover:border-[1px] hover:text-white duration-300 hover:bg-transparent px-2 bg-orange-500 shadow-[0_5px_20px_rgba(255,255,255)] rounded-2xl text-white font-semibold">First-Aid
+                        Steps</a>
+                    <a href="#"
+                        class="py-1 w-fit h-fit hover:border-[1px] hover:text-white duration-300 hover:bg-transparent px-2 bg-orange-500 shadow-[0_5px_20px_rgba(255,255,255)] rounded-2xl text-white font-semibold">Precautionary
+                        Steps</a>
+                </div>
+                <div class="relative gap-5 flex md:right-[30%]"><a href="#"
+                        class="py-1 w-fit h-fit hover:border-[1px] hover:text-white duration-300 hover:bg-transparent px-2 bg-orange-500 shadow-[0_5px_20px_rgba(255,255,255)] rounded-2xl text-white font-semibold">Health
+                        Care Centers</a>
+                    <a href="#"
+                        class="py-1 w-fit h-fit hover:border-[1px] hover:text-white duration-300 hover:bg-transparent px-2 bg-orange-500 shadow-[0_5px_20px_rgba(255,255,255)] rounded-2xl text-white font-semibold">Relief
+                        Camps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Weather section -->
+    <section class="container mx-auto my-10 gap-2 h-[60vh] md:flex-row flex-col-reverse md:h-[70vh] flex p-4">
+        <div class="w-full border-2 rounded-xl overflow-hidden md:w-1/2 mx-2 h-full">
+            <img class="h-full "
+                src="https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2020/08/082920_aw_forecast_feat.jpg"
+                alt="">
+            </div>
+            <div
+            class="w-full flex md:flex-col justify-center items-center md:w-1/2 mx-2 h-full text-center text-black text-5xl lg:text-[20vh] tracking-wider">
+            <p>Nearby Situation</p>
+            <div class="w-full flex justify-center items-center"> <button class="text-xl md:text-2xl hover:bg-transparent hover:border-black border-[1px] duration-300 hover:border-[1px] hover:text-black md:my-4 bg-black text-white py-2 px-3 w-fit rounded-full"> click </button></div>
+        </div>
+    </section>
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 pt-6 md:p-6 lg:p-12">
+        <div class="flex flex-wrap justify-center -mx-4">
+            <div class="w-full md:w-1/3 xl:w-1/3 p-4">
+                <h1 class="text-2xl  font-extrabold">Pre Disaster</h1>
+                <div class="bg-white rounded shadow-[5px_5px_0px_0px_rgba(249,115,22)] p-4">
+                    <img src="https://www.hi.org/sn_uploads/fck/IMG_BANDEAUX_PAGES_TABLETTES_TELHI_DANS_LE_MONDE.jpg"
+                        alt="Image 1" class="w-full h-64 object-cover mb-4">
+                    <p class="text-lg text-gray-600 mb-4">Stay informed about weather updates and emergency alerts in
+                        your area. Make sure you have a plan in place in case of a disaster. Know your evacuation routes
+                        and emergency shelters. Practice your plan with your family to ensure everyone knows what to do
+                        in case of a disaster.</p>
+                    <a href="predisaster.html"
+                        class="bg-orange-500  duration-500 hover:text-orange-500 hover:bg-white hover:border-b-2 hover:border-l-4 text-white font-bold py-2 px-4 rounded text-center block">GuideLines</a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 xl:w-1/3 p-4">
+                <div class="bg-white rounded shadow-[5px_5px_0px_0px_rgba(249,115,22)] p-4">
+                    <h1 class="text-2xl  font-extrabold md:pb-7">During Disaster</h1>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT33weod0THFguNldQZ4dFHmzHZu6AMY0M3oA&s"
+                        alt="Image 2" class="w-full h-64 object-cover mb-4">
+                    <p class="text-lg text-gray-600 mb-4">Seek shelter immediately. Go to a basement or an interior room
+                        on the lowest floor of your building. Stay away from windows and doors. Avoid traveling and stay
+                        off the roads. If you're driving, pull over to a safe location and wait for the disaster to
+                        pass.</p>
+                    <a href="duringdisaster.html"
+                        class="bg-orange-500  duration-500 hover:text-orange-500 hover:bg-white hover:border-b-2 hover:border-l-4 text-white font-bold py-2 px-4 rounded text-center block">GuideLines</a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 xl:w-1/3 p-4">
+                <div class="bg-white rounded shadow-[5px_5px_0px_0px_rgba(249,115,22)] p-4">
+                    <h1 class="text-2xl font-extrabold">Post Disaster</h1>
+                    <img src="https://www.habitat.org/sites/default/files/2016-09/disaster-volunteers-rebuild-nepal-earthquake-2.jpg"
+                        alt="Image 3" class="w-full h-64 object-cover md:mb-9">
+                    <p class="text-lg text-gray-600 mb-4">Check for injuries and provide assistance if needed. If you're
+                        trained, provide first aid and CPR if necessary. Take photos of any damage to your property and
+                        belongings for insurance purposes. Contact your insurance provider to report any claims.</p>
+                    <a href="afterdisaster.html"
+                        class="bg-orange-500  text-white font-bold py-2 px-4 rounded text-center duration-500 hover:text-orange-500 hover:bg-white hover:border-b-2 hover:border-l-4 block">GuideLines</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- HeatMap Section -->
+    <section id="" class=" bg-white flex justify-between md:h-[500px] h-[300px] w-full p-10">
+        <div
+            class="flex md:flex-col gap-10 text-black text-[5vh]   text-center tracking-widest   w-[30%]">
+            <p><u>Pre-Disaster</u> <u>Forecast</u></p>
+            <p class="text-sm">Pre-disaster planning is crucial for minimizing the impact of disasters and ensuring community resilience. It involves identifying potential hazards, assessing vulnerabilities, and implementing strategies to mitigate risks. By preparing resources, developing evacuation plans, and establishing communication protocols, communities can respond swiftly when disasters strike. Public awareness campaigns and regular drills help educate people on safety measures, making them more prepared and capable of protecting themselves and their assets. Effective pre-disaster measures can significantly reduce loss of life, damage to property, and recovery time.</p>
+        </div>
+        <div id="heatMap" class="h-[100%] w-[60%]"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white p-4 pt-6 md:p-6 lg:p-12">
+        <footer class="bg-zinc-700 text-white py-10">
+            <div class="container mx-auto flex flex-col items-center">
+                <img src="./asset/Make Logo.jpg" alt="Brand Logo" class="mb-4 h-16">
+                <h2 class="text-2xl font-semibold mb-2">Stay Connected</h2>
+                <p class="mb-6">© 2024 ResQore. All rights reserved.</p>
+                <nav class="mb-4">
+                    <a href="#privacy-policy" class="hover:text-gray-400 md:mx-2">Privacy Policy</a> |
+                    <a href="#terms-of-service" class="hover:text-gray-400 md:mx-2">Terms of Service</a> |
+                    <a href="#contact-us" class="hover:text-gray-400 md:mx-2">Contact Us</a>
+                </nav>
+                <div class="flex space-x-4 flex-wrap">
+                    <a href="/assets/contactus.html" class="hover:text-gray-400"><i class="fab fa-facebook-f"></i>
+                        Facebook</a>
+                    <a href="#" class="hover:text-gray-400"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#" class="hover:text-gray-400"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#" class="hover:text-gray-400"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                </div>
+            </div>
+        </footer>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Leaflet heatmap plugin -->
+    <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+
+    <!-- Heatmap Script -->
+    <script>
+        // Initialize the map
+        var map = L.map('heatMap').setView([37.7749, -122.4194], 13); // Centered on San Francisco (example coordinates)
+
+        // Load and display map tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Sample heatmap data points [latitude, longitude, intensity]
+        var heatData = [
+            [37.782551, -122.445368, 0.5],
+            [37.782745, -122.444586, 0.5],
+            [37.782842, -122.443688, 0.5],
+            [37.782919, -122.442815, 0.5],
+            [37.782992, -122.442112, 0.5],
+            [37.783100, -122.441461, 0.5]
+        ];
+
+        // Add heatmap layer to the map
+        var heat = L.heatLayer(heatData, {
+            radius: 25,    // Adjust radius
+            blur: 15,      // Adjust blur effect
+            maxZoom: 17    // Max zoom level
+        }).addTo(map);
+    </script>
+</body>
+
+</html>

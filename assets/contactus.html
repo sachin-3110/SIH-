@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Disaster Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body class="w-full h-full bg-gray-100 relative">
+
+    <!-- Navbar -->
+    <nav class="flex justify-between w-full fixed top-0 p-4">
+        <div class="flex items-center w-[20%]">
+            <a href="/assets/index.html">
+                <img src="asset/Make Logo.jpg" class="h-full w-24" alt="Logo">
+            </a>
+        </div>
+        <div class="lg:flex items-center hidden w-[50%] ">
+            <a href="/assets/index.html" id="Home-button"
+                class=" hover:bg-[#dadada] hover:text-zinc-700 duration-300 text-zinc-700 text-[3vh] font-extrabold px-2 rounded">Home</a>
+            <a href="/assets/about.html" id="about-button"
+                class=" hover:bg-[#dadada] hover:text-zinc-700 duration-300 text-zinc-700 text-[3vh] font-extrabold px-2 rounded ml-2">About</a>
+            <a href="/assets/services.html" id="about-button"
+                class=" hover:bg-[#dadada] hover:text-zinc-700 duration-300 text-zinc-700 text-[3vh] font-extrabold px-2 rounded ml-2">Services</a>
+            <a href="/assets/ContactUs.html" id="about-button"
+                class=" hover:bg-[#dadada] hover:text-zinc-700 duration-300 text-zinc-700 text-[3vh] font-extrabold px-2 rounded ml-2">Contact
+                Us</a>
+            <a href="LogSignup.html"
+                class=" hover:bg-[#dadada] hover:text-zinc-700 duration-300 text-zinc-700 text-[3vh] font-extrabold px-2 rounded ml-2">Login/Signup</a
+                href="">
+        </div>
+        <div class="flex  text-zinc-700 text-xl gap-2">
+            <div><i class="ri-global-fill text-zinc-700"></i></div>
+            <h1>English</h1>
+        </div>
+    </nav>
+    <!-- Contact Us Section -->
+    <section class="container mx-auto mt-20">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Contact Us</h2>
+        <p class="text-center text-gray-600 mb-8">Please fill out the form and we will get in touch with you as soon as possible.</p>
+
+        <form id="contactForm" class="max-w-lg mx-auto bg-white p-8 rounded shadow">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+                <input type="text" id="name" placeholder="Your Full Name" name="name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                <input type="email" id="email" placeholder="somethin@something.com" name="email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+                <textarea id="message" name="message" placeholder="write your situtation beiefly" rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" required></textarea>
+            </div>
+
+            <button type="submit" class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 w-full">Submit</button>
+        </form>
+
+        <!-- Success Message -->
+        <p id="successMessage" class="text-center text-green-500 text-lg mt-6 hidden">Thank you! We will contact you as soon as possible.</p>
+    </section>
+
+    <script>
+        // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Display success message after submission
+            document.getElementById('successMessage').classList.remove('hidden');
+
+            // Optionally, reset the form
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+
+</body>
+</html>
